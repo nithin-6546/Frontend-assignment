@@ -1,0 +1,121 @@
+.top{ 
+    display: flex;
+    justify-content: space-between;
+}
+.top h2{ 
+    padding-left: 30px;
+    color:black;
+} 
+.top ul{ 
+    font-size: large;
+    list-style: none;
+    display: flex;
+    color:rgb(54, 211, 211);
+    gap: 30px;
+} 
+.middle{
+    background-color: rgb(68, 213, 213);
+    position: relative;
+    height:250px; 
+    color: white;
+}
+.middle img{
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 550px;
+    width:200px;
+    height: 150px;
+}
+.middle h2{
+    position: absolute; 
+    bottom: 25px;
+    left:580px;
+}
+.middle h5{ 
+    position: absolute; 
+    bottom: 5px;
+    left:500px;
+}
+.bottom{
+    display: flex; 
+    justify-content: space-between;
+}
+.row1{  
+    width:900px;
+    justify-content: space-between;
+    padding-left: 40px;
+}
+.row2{
+    padding-left: 50px;
+    width:1000px;
+}
+.row2 img{ 
+    width: 400px;
+    height: 200px;
+    justify-content: space-between;
+}
+.row3 {
+    width:900px;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 1100px) {
+    .middle img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .middle h2 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .middle h5 {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+    }
+    .row1, .row2, .row3 {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 809px) {
+    .top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .top h2 {
+        padding-left: 0;
+    }
+    .top ul {
+        padding: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .middle {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .middle img, .middle h2, .middle h5 {
+        position: static;
+        transform: none;
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+    }
+    .bottom {
+        flex-direction: column;
+    }
+    .row1, .row2, .row3 {
+        width: 100%;
+        padding: 20px;
+    }
+    .row2 img {
+        width: 100%;
+        height: auto;
+    }
+}
